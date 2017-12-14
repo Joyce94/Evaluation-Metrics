@@ -302,11 +302,11 @@ class Eval():
 
     def overall_evaluate(self, predict_set, gold_set, eval_type):
         if eval_type == 'Exact':
-            return self.Exact_match(predict_set, gold_set)
+            return self.Exact_match_my(predict_set, gold_set)
         elif eval_type == 'Binary':
-            return self.Binary_evaluate(predict_set, gold_set)
+            return self.Binary_evaluate_my(predict_set, gold_set)
         elif eval_type == 'Prop':
-            return self.Propor_evaluate(predict_set, gold_set)
+            return self.Propor_evaluate_my(predict_set, gold_set)
 
     def eval(self, gold_labels, predict_labels, eval_type, prefix_array):
         for index in range(len(gold_labels)):
